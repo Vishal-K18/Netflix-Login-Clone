@@ -1,9 +1,8 @@
-FROM tomcat:9.0-jdk11
 
+FROM tomcat:10.0
+
+# Clean default Tomcat apps (optional)
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-COPY src/main/webapp/ /usr/local/tomcat/webapps/ROOT/
-
-EXPOSE 8080
-
-CMD ["catalina.sh", "run"]
+# Copy WAR to webapps directory
+COPY deploy/login-form-servlet.war /usr/local/tomcat/webapps/ROOT.war
