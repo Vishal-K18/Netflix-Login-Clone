@@ -4,7 +4,6 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 
 COPY ROOT.war /usr/local/tomcat/webapps/ROOT.war
 
-# Replace hardcoded port 8080 with dynamic $PORT
 RUN sed -i 's/port="8080"/port="${PORT}"/' /usr/local/tomcat/conf/server.xml
 
 EXPOSE 8080
