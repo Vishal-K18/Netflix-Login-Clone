@@ -1,0 +1,10 @@
+[build]
+builder = "docker"
+
+[deploy]
+startCommand = "/entrypoint.sh"
+
+[services.app]
+ports = [
+  { port = 8080, type = "http" }
+]
