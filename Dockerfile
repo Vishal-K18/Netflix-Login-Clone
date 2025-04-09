@@ -1,8 +1,8 @@
 
-FROM tomcat:10.0
+FROM tomcat:9.0-jdk17
 
-# Clean default Tomcat apps (optional)
+# Clean default apps
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Copy WAR to webapps directory
-COPY deploy/login-form-servlet.war /usr/local/tomcat/webapps/ROOT.war
+# Copy WAR file
+COPY login-form-servlet.war /usr/local/tomcat/webapps/ROOT.war
