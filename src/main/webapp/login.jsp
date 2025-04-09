@@ -100,7 +100,7 @@
 <img src="images/logoo.png" alt="Netflix Logo" class="netflix-logo" />
 <div class="login-box">
     <h2>Sign In</h2>
-    <form action="LoginServlet" method="post">
+    <form action="login" method="post">
         <input type="text" name="username" placeholder="Email or phone number" required>
         <input type="password" name="password" placeholder="Password" required>
         <input type="submit" value="Sign In">
