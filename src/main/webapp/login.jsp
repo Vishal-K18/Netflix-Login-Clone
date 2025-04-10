@@ -113,6 +113,9 @@
         <div class="signup">
             New to Netflix? <a href="#">Sign up now</a>
         </div>
+        
+        <a href="LoginServlet">Click to test LoginServlet</a>
+        
     </form>
 </div>
 
